@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Django
+*.sqlite3
+*.log
+.env
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# VSCode
+.vscode/
+
+# Migrations (optional, keep if you want to version them)
+**/migrations/*.pyc
+**/migrations/__pycache__/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+*.pid

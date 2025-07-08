@@ -1,0 +1,21 @@
+services:
+  web:
+    build: .
+    command: gunicorn authapi.wsgi:application --bind 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    environment:
+      - DJANGO_SETTINGS_MODULE=authapi.settings
+    restart: unless-stopped
+#  db:
+#    image: postgres:16
+#    environment:
+#      POSTGRES_DB: jwt_db
+#      POSTGRES_USER: jwt_user
+#      POSTGRES_PASSWORD: jwt_pass
+#    ports:
+#      - "5432:5432"
